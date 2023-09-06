@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Recent News"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <experienceFragmentPath
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        value="/content/experience-fragments/mysite/us/en/site/news-cards/master/jcr:content/root"
+                        disabled="{Boolean}false"
+                        required="{Boolean}true"
+                        fieldLabel="Experience Fragment Path"
+                        name="./experienceFragmentPath" />
+                    <slingResourceTypeValue
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        value="mysite/components/recent-news/news-card"
+                        disabled="{Boolean}false"
+                        required="{Boolean}true"
+                        fieldLabel="Sling Resource Type Value"
+                        name="./slingResourceTypeValue" />
+                    <maxDisplayCount
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                        allowDecimals="false"
+                        allowNegative="false"
+                        fieldLabel="Maximum News Cards Display Count"
+                        name="./maxDisplayCount"
+                        required="{Boolean}true"
+                        step="1"
+                        min="1"
+                        max="3"
+                        value="3" />
+                    <headerCaption
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Header Caption"
+                        value="Recent News"
+                        name="./headerCaption" />
+                    <ctaLink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                        fieldLabel="CTA Link"
+                        rootPath="/content/mysite"
+                        name="./ctaLink" />
+                    <ctaCaption
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="CTA Caption"
+                        value="View All News"
+                        name="./ctaCaption" />
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

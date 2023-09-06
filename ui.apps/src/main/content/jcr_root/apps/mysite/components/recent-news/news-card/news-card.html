@@ -1,0 +1,26 @@
+<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<div class="col-sm-6 card-first-col">
+    <div class="card" style="width: 21rem;">
+        <div data-sly-test="${properties.isStickyNews == 'true'}"
+            data-sly-resource="${ 'sticky-image' @ resourceType = 'mysite/components/image'}"
+            data-sly-unwrap="${wcmmode.disabled}">
+        </div>
+        <div class="card-body">
+            <h6 class="card-title">${properties.newsCategory}</h6>
+            <h5 class="card-title">${properties.newsTitle}</h5>
+            <div class="card-text"
+                data-sly-resource="${ 'card-text' @ resourceType='mysite/components/text', decoration=true}"></div>
+            <div>
+                <span style="font-size: .7rem;">${ 'MMM d, YYYY' @ format=properties.publishedDate} |
+                    ${properties.newsSource} </span>
+                <span style="margin-left: 20px">
+                    <a class="icon-link" href="${properties.ctaLink}.html">${properties.ctaCaption}<svg class="bi"
+                            aria-hidden="true">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg></a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

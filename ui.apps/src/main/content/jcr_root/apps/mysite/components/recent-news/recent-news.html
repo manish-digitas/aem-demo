@@ -1,0 +1,18 @@
+<div class="row col-sm-8 cmp-card--outline" style="margin: 20px">
+    <h3>${properties.headerCaption}</h3>
+    <div data-sly-use.resourceModel="com.demo.aem.core.models.RecentNewsModel"
+        data-sly-test="${resourceModel.resourceList}" data-sly-list="${resourceModel.resourceList}">
+
+        <div data-sly-resource="${item.path @ resourceType=item.resourceType}" data-sly-unwrap="${wcmmode.disabled}">
+        </div>
+
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end"
+        style="margin-top: 10px;margin-bottom: 10px; margin-right: 10px;">
+
+        <a href="#" class="btn btn-danger btn-primary btn-lg" tabindex="-1" role="button"
+            aria-disabled="true">${properties.ctaCaption}</a>
+
+    </div>
+
+</div>
